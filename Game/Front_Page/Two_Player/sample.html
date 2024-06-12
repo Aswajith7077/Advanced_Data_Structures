@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Signika:wght@300&display=swap');
+      body
+      {
+        background-color: black;
+      }
+      .slide_bar
+      {
+        position: relative;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        height: 200px;
+        width: 2000px;
+        background-color: white;
+        border-radius: 160px;
+        align-items: center;
+        justify-content: center;
+      }
+      .slider
+      {
+        height: 160px;
+        width: 1000px;
+        background: goldenrod;
+        border-radius: 80px ;
+        position: inherit;
+        top: 50%;
+        left: 26.5%;
+        transform: translate(-50%,-50%);
+        transition: 0.5s;
+      }
+      .turn_x
+      {
+        font-family: Signika;
+        font-size: 100px;
+        font-weight: 600;
+        position: inherit;
+        top: 10%;
+        left: 35%;
+        background: none;
+        outline: none;
+        border: none;
+        transform: translate(-15%,0);
+        cursor: pointer;
+      }
+      .turn_o
+      {
+        font-family: Signika;
+        font-size: 100px;
+        font-weight: 600;
+        position: relative;
+        top: -60%;
+        left: 55%;
+        background: none;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transform: translate(55%,-10%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide_bar">
+      <div class="slider" id="slider">
+        <button class="turn_x" onclick="Move_right()">X to play</div>
+        <button class="turn_o" onclick="Move_left()">O to play</div>
+      </div>
+    </div>
+    <script>
+      function Move_right()
+      {
+        document.getElementById("slider").style.left='46.5%';
+      }
+      function Move_left()
+      {
+        document.getElementById("slider").style.left='26.5%';
+      }
+      
+    </script>
+  </body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="resources/Audio/Tac.wav" as="wav" />
+    <link rel="preload" href="resources/Audio/Tic.mp3" as="mp3" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <h1 class="Main_title">Tic Tac Toe</h1>
+    <div class="nav_bar">
+      <a class="home_link" href="/frontpage.html"><div class="home_button">
+        <img class="home" src="resources/images/BAck.png" />
+      </div>
+      </a>
+    </div>
+    
+    <div class="restart_game" onclick="reset_game()">
+      <img src="resources/images/restart.png" >
+      <h1 class="restart_text">Restart</h1>
+    </div>
+      <div class="game_area" id="game_area">
+        <div class="row" id="row">
+          <div class="box" id="Box1" onclick="decision(this.id)">
+            <svg class="X" id="Ex1" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR1"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL1"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh1" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle1"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="box" id="Box2" onclick="decision(this.id)">
+            <svg class="X" id="Ex2" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR2"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL2"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh2" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle2"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="box" id="Box3" onclick="decision(this.id)">
+            <svg class="X" id="Ex3" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR3"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL3"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh3" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle3"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="row" id="row">
+          <div class="box" id="Box4" onclick="decision(this.id)">
+            <svg class="X" id="Ex4" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR4"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL4"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh4" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle4"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="box" id="Box5" onclick="decision(this.id)">
+            <svg class="X" id="Ex5" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR5"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL5"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh5" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle5"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="box" id="Box6" onclick="decision(this.id)">
+            <svg class="X" id="Ex6" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR6"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL6"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh6" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle6"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="row" id="row">
+          <div class="box" id="Box7" onclick="decision(this.id)">
+            <svg class="X" id="Ex7" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR7"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL7"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh7" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle7"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="box" id="Box8" onclick="decision(this.id)">
+            <svg class="X" id="Ex8" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR8"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL8"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh8" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle8"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+          <div class="box" id="Box9" onclick="decision(this.id)">
+            <svg class="X" id="Ex9" width="575" height="575">
+              <rect
+                class="XLR"
+                id="XLR9"
+                x="160"
+                y="10"
+                class="Box1"
+                width="470"
+                height="80"
+              ></rect>
+              <rect
+                class="XRL"
+                id="XRL9"
+                x="-275"
+                y="355"
+                class="Box2"
+                width="470"
+                height="80"
+              ></rect>
+            </svg>
+
+            <svg class="O" id="Oh9" height="1000" width="1000">
+              <circle
+                class="Circle"
+                id="circle9"
+                cx="275"
+                cy="300"
+                r="175"
+                stroke="white"
+                stroke-width="60"
+                fill="none"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Container" id="Container">
+      <div class="container" id="container">
+        <div class="dummy" id="dummy"></div>
+        <div class="pop_up" id="pop_up">
+          <div class="wave1">
+            <img
+              src="resources/images/close.png"
+              class="pop_up_close"
+              onclick="close_popup()"
+            />
+          </div>
+          <div class="wave2">
+            <img
+              src="resources/images/close.png"
+              class="pop_up_close"
+              onclick="close_popup()"
+            />
+          </div>
+          <div class="wave3">
+            <img
+              src="resources/images/close.png"
+              class="pop_up_close"
+              onclick="close_popup()"
+            />
+          </div>
+          <img
+            class="pop_up_img"
+            id="pop_up_img"
+            src="resources/images/hand-shake.png"
+            alt=""
+          />
+          <h1 class="pop_up_h1" id="pop_up_h1">The Game is a Draw</h1>
+          <p id="pop_up_p">DRAW</p>
+          <div class="controls">
+            <button class="pop_up_rematch" onclick="reset_game()">Rematch</button>
+            <a href="/frontpage.html"><button class="pop_up_home">Quit</button></a>
+          </div>
+        </div>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>

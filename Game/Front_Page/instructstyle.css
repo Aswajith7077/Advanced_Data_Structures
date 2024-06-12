@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Signika:wght@300&display=swap');
+@font-face {
+  font-family: Mouldy_cheese;
+  src: url("resources/fonts/Mouldy_Cheese.ttf");
+}
+@font-face {
+    font-family: Rosematika;
+    src: url('/resources/fonts/Rosmatika.ttf');
+}
+body{
+    background-image:url("resources/images/Background.jpg");
+    background-size: cover;
+}
+.main{
+    position: relative;
+    top: 10px;
+    font-family: Mouldy_cheese;
+    text-align:center;
+    color:yellow;
+    font-size:300px;
+    -webkit-text-stroke:2px orange;
+}
+.h1
+{
+    text-align: center;
+    font-family: Rosematika;
+    font-size:200px;
+    position: relative;
+    top: -450px;
+    color:whitesmoke;
+}
+.h2
+{
+    text-align: center;
+    font-family: Rosematika;
+    font-size:200px;
+    position: relative;
+    top: -350px;
+    color:whitesmoke;
+}
+ul
+{
+    width: 4000px;
+    position: relative;
+    left: 50%;
+    transform: translate(-45%,0);
+    font-family:"Signika";
+    font-size:90px;
+    color:white;
+}
+.container1
+{
+    position: relative;
+    top: -400px;
+}
+.container2
+{
+    position: relative;
+    top: -300px;
+}
+.home_button
+{
+    position: relative;
+    top: -550px;
+    left: 150px;
+    height: 300px;
+    width: 300px;
+    background-color: yellow;
+    border-radius: 1000px;
+    border: 30px orange solid;
+    display: flex;
+}
+.home_button:hover
+{
+    background-color: white;
+    border: 30px solid green;
+    cursor: pointer;
+    .home
+    {
+        margin: 10px;
+    }
+    
+}
+
+.home
+{
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+}

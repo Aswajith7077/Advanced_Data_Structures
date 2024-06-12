@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: Mouldy_cheese;
+    src: url(resources/fonts/Mouldy_Cheese.ttf);
+}
+@font-face {
+    font-family: Dragon_Hunter;
+    src: url(resources/fonts/Dragon_Hunter.otf);
+}
+@font-face {
+    font-family: Aloevera;
+    src: url(resources/fonts/Aloevera.ttf);
+}
+body
+{
+    background: url('resources/images/Background.jpg');
+    background-size: cover;
+}
+
+.MainTitle
+{
+    color: yellow;
+    -webkit-text-stroke: 2px orange;
+
+    font-size: 108px;
+    text-align: center;
+    padding: 50px;
+    font-family: Mouldy_Cheese;
+    letter-spacing: 5px;
+    font-weight: 600;
+}
+    
+.MainMenu
+{
+    color: #fff;
+    font-family: Aloevera;
+    font-size: 230%;
+    padding-top: 2%;
+    padding-left: 37%;
+}
+
+.MainMenu .Option
+{
+    margin: 20px;
+    color: white;
+}
+.MainMenu .Option a
+{
+    padding: 10px;
+    font-family: Dragon_Hunter;
+    letter-spacing: 3px;
+    color: #fff;
+    text-decoration: none;
+}
+.MainMenu .Option a:hover
+{
+    color: #fff;
+    text-decoration: underline;
+}
+.Game_Title
+{
+    color: yellow;
+    -webkit-text-stroke: 1px orange;
+
+    font-size: 56px;
+    text-align: center;
+    padding: 10px;
+    font-family: Mouldy_Cheese;
+
+    font-weight: 600;
+}
+.Container
+{   
+    align-items: center;
+    height:594px;
+    width: 630px;
+    background-color: white;
+    border-radius: 20px;
+}
+.Container .    box1
+{
+    background-color: aqua;
+}

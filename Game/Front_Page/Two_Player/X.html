@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: black;
+      }
+      #circle {
+        stroke-dasharray: 2512.25;
+        stroke-dashoffset: 2512.25;
+        animation: dash 1s linear forwards paused; /* Set the animation to paused initially */
+      }
+      @keyframes dash {
+        0% {
+          stroke-dashoffset: 2512.25;
+        }
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <svg id="SVG" height="1000" width="1000">
+      <circle
+        id="circle"
+        cx="500"
+        cy="500"
+        r="400"
+        stroke="white"
+        stroke-width="120"
+        fill="none"
+        stroke-linecap="round"
+      />
+    </svg>
+
+    <script>
+      // Function to start the animation
+      function startAnimation() {
+        document.getElementById('circle').style.animationPlayState = 'running';
+      }
+
+      // Function to stop the animation
+      function stopAnimation() {
+        document.getElementById('circle').style.animationPlayState = 'paused';
+      }
+
+      // Start the animation after 2 seconds (2000 milliseconds)
+      setTimeout(startAnimation, 2000);
+
+      // Stop the animation after 5 seconds (5000 milliseconds)
+      setTimeout(stopAnimation, 5000);
+    </script>
+  </body>
+</html>

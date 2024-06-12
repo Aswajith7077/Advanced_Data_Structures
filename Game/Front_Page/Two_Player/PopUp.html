@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sample.css" />
+  </head>
+  <body>
+    <button type="submit" class="button" id="btn" onclick="call()">Submit</button>
+    <div class="container" id="container">
+      <div class="dummy"></div>
+      <div class="pop_up" id="pop_up">
+        <div class="wave1">
+          <img
+            src="resources/images/close.png"
+            class="pop_up_close"
+            onclick="close_popup()"
+          />
+        </div>
+        <div class="wave2">
+          <img
+            src="resources/images/close.png"
+            class="pop_up_close"
+            onclick="close_popup()"
+          />
+        </div>
+        <div class="wave3">
+          <img
+            src="resources/images/close.png"
+            class="pop_up_close"
+            onclick="close_popup()"
+          />
+        </div>
+        <img
+          class="pop_up_img"
+          id="pop_up_img"
+          src="resources/images/hand-shake.png"
+          alt=""
+        />
+        <h1 class="pop_up_h1" id="pop_up_h1">The Game is a Draw</h1>
+        <p id="pop_up_p">DRAW</p>
+        <div class="controls">
+          <button class="pop_up_rematch" onclick="rematch()">Rematch</button>
+          <button class="pop_up_home">Quit</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      function createpopup(id)
+      {
+        let popupNode=document.querySelector(id);
+        let dummy=popupNode.querySelector(".dummy");
+        let close=popupNode.querySelector(".pop_up_close");
+
+        function open_popup()
+        {
+          popupNode.classList.add("active");
+        }
+        function close_popup()
+        {
+          popupNode.classList.remove("active");
+        }
+        dummy.addEventListener("click",close_popup);
+        close.addEventListener("click",close_popup);
+        return open_popup();
+      }
+
+      function call()
+      {
+        createpopup('#container');
+      }
+      
+    </script>
+  </body>
+</html>
